@@ -1,18 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:layout_margin="16dp">
 
     <TextView
+        android:id="@+id/tv_judul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="SELAMAT DATANG \nDI APLIKASI SELESA"
+        android:textSize="24dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:layout_marginTop="64dp"
+        android:textStyle="bold"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tv_ketJudul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ayo Kenali Lokasi Bersejarah di Indonesia!"
+        android:layout_below="@+id/tv_judul"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="72dp"
+        android:justificationMode="inter_word"/>
+
+    <Button
+        android:id="@+id/btn_kemerdekaan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sejarah Kemerdekaan Indonesia"
+        android:layout_below="@+id/tv_ketJudul"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        android:padding="14dp"/>
+
+    <Button
+        android:id="@+id/btn_islam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sejarah Islam"
+        android:layout_below="@+id/btn_kemerdekaan"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        android:padding="14dp"/>
+
+    <Button
+        android:id="@+id/btn_hindu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sejarah Hindu"
+        android:layout_below="@+id/btn_islam"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        android:padding="14dp"/>
+
+    <Button
+        android:id="@+id/btn_buddha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sejarah Budha"
+        android:layout_below="@+id/btn_hindu"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        android:padding="14dp"/>
+
+    <Button
+        android:id="@+id/btn_kristen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sejarah Kristen"
+        android:layout_below="@+id/btn_buddha"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        android:padding="14dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CopyRight © 2022 Selesa. All rights reserved\n By Ahmad Dumyati, Josua Manalu, Marcelo Amazona"
+        android:textAlignment="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="12dp"
+        android:textSize="12sp"/>
+
+</RelativeLayout>
