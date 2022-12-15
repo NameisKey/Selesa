@@ -38,7 +38,8 @@
         android:layout_below="@+id/tv_ketJudul"
         android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="8dp"
-        android:padding="14dp"/>
+        android:padding="14dp"
+        android:backgroundTint="#F3BE2F"/>
 
     <Button
         android:id="@+id/btn_islam"
@@ -48,7 +49,8 @@
         android:layout_below="@+id/btn_kemerdekaan"
         android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="8dp"
-        android:padding="14dp"/>
+        android:padding="14dp"
+        android:backgroundTint="#F3BE2F"/>
 
     <Button
         android:id="@+id/btn_hindu"
@@ -58,7 +60,8 @@
         android:layout_below="@+id/btn_islam"
         android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="8dp"
-        android:padding="14dp"/>
+        android:padding="14dp"
+        android:backgroundTint="#F3BE2F"/>
 
     <Button
         android:id="@+id/btn_buddha"
@@ -68,7 +71,8 @@
         android:layout_below="@+id/btn_hindu"
         android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="8dp"
-        android:padding="14dp"/>
+        android:padding="14dp"
+        android:backgroundTint="#F3BE2F"/>
 
     <Button
         android:id="@+id/btn_kristen"
@@ -78,9 +82,11 @@
         android:layout_below="@+id/btn_buddha"
         android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="8dp"
-        android:padding="14dp"/>
+        android:padding="14dp"
+        android:backgroundTint="#F3BE2F"/>
 
     <TextView
+        android:id="@+id/tv_copyright"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="CopyRight © 2022 Selesa. All rights reserved\n By Ahmad Dumyati, Josua Manalu, Marcelo Amazona"
@@ -88,5 +94,19 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="12dp"
         android:textSize="12sp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_copyright"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="4dp"
+        android:src="@drawable/ic_baseline_info_24"
+        android:backgroundTint="#F3BE2F"
+        app:tint="@color/white"
+        android:clipToOutline="true"
+        app:backgroundTint="#F3BE2F"/>
+
 
 </RelativeLayout>
