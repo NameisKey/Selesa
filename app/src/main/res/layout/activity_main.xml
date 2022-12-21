@@ -108,5 +108,4 @@
         android:clipToOutline="true"
         app:backgroundTint="#F3BE2F"/>
 
-
 </RelativeLayout>
