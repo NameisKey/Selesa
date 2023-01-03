@@ -1,15 +1,15 @@
-package com.yosha.selesa;
+package com.yosha.selesa.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.yosha.selesa.R;
 
 public class MainActivity extends AppCompatActivity {
     private FloatingActionButton openBottomModal;

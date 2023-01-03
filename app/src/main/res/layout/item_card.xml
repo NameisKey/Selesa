@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:elevation="6dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp">
+
+        <ImageView
+            android:id="@+id/iv_foto"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="@string/img_desc_tempatsejarah"/>
+
+        <TextView
+            android:id="@+id/tv_judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Tempat Bersejarah"
+            android:layout_toEndOf="@+id/iv_foto"
+            android:layout_marginStart="8dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginBottom="4dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:justificationMode="inter_word"/>
+
+        <TextView
+            android:id="@+id/deskripsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi Singkat"
+            android:layout_below="@id/tv_judul"
+            android:layout_toEndOf="@id/iv_foto"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:justificationMode="inter_word"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

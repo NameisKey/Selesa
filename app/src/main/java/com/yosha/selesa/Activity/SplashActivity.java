@@ -1,4 +1,4 @@
-package com.yosha.selesa;
+package com.yosha.selesa.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
+
+import com.yosha.selesa.R;
 
 public class SplashActivity extends AppCompatActivity {
 

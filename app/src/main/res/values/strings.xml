@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Selesa</string>
+    <string name="judul">SELAMAT DATANG \nDI APLIKASI SELESA</string>
+    <string name="sub_judul">Ayo Kenali Lokasi Bersejarah di Indonesia!</string>
+    <string name="kemerdekaan_indonesia">Sejarah Kemerdekaan Indonesia</string>
+    <string name="islam">Sejarah Islam</string>
+    <string name="hindu">Sejarah Hindu</string>
+    <string name="budha">Sejarah Budha</string>
+    <string name="kristen">Sejarah Kristen</string>
+    <string name="copyright">CopyRight © 2022 Selesa. All rights reserved\n By Ahmad Dumyati, Josua Manalu, Marcelo Amazona</string>
+    <string name="img_desc">Logo</string>
+    <string name="img_desc_tempatsejarah">Foto Tempat Bersejarah</string>
 </resources>
