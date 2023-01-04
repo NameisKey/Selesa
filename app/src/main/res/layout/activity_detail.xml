@@ -22,11 +22,20 @@
         android:textSize="24dp"
         android:textStyle="bold"
         android:layout_below="@+id/ypv_video"/>
-    
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_detail_judul"
+        android:layout_above="@id/btn_map">
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent">
     <TableLayout
         android:id="@+id/tbl_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:shrinkColumns="2"
         android:layout_below="@+id/tv_detail_judul">
 
         <TableRow android:padding="6dp">
@@ -65,18 +74,28 @@
                 android:text="Luas Tempat"/>
         </TableRow>
 
-        <TableRow android:padding="6dp">
+        <TableRow
+            android:padding="6dp">
+
+            <TextView android:text="Deskripsi" />
+
             <TextView
-                android:text="Deskripsi"/>
-            <TextView
-                android:text=" : "
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="6dp"/>
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="6dp"
+                android:text=" : " />
+
             <TextView
                 android:id="@+id/tv_detail_deskripsi"
-                android:text="Deskripsi"/>
+                android:layout_width="wrap_content"
+                android:text="Deskripsi"
+                android:justificationMode="inter_word"/>
         </TableRow>
+
     </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+
 
     <Button
         android:id="@+id/btn_map"

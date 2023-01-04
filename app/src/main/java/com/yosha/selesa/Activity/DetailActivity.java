@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
@@ -34,17 +35,19 @@ public class DetailActivity extends AppCompatActivity {
 
         Intent getIntent = getIntent();
         detailJudul = getIntent.getStringExtra("xJudul");
-//        detailDeskripsi = getIntent.getStringExtra("xDeskripsi");
-//        detailKota = getIntent.getStringExtra("xKota");
-//        detailLuas = getIntent.getStringExtra("xLuas");
-//        detailTglDibangun = getIntent.getStringExtra("xTglDibangun");
-//        videoId = getIntent.getStringExtra("xVideoId");
+        detailDeskripsi = getIntent.getStringExtra("xDeskripsi");
+        detailKota = getIntent.getStringExtra("xKota");
+        detailLuas = getIntent.getStringExtra("xLuas");
+        detailTglDibangun = getIntent.getStringExtra("xTglDibangun");
+        videoId = getIntent.getStringExtra("xVideoId");
 
         tvDetailJudul.setText(detailJudul);
-//        tvDetailDeskripsi.setText(detailDeskripsi);
-//        tvDetailLuas.setText(detailLuas);
-//        tvDetailKota.setText(detailKota);
-//        tvDetailTglDibangun.setText(detailTglDibangun);
+        tvDetailDeskripsi.setText(detailDeskripsi);
+        tvDetailLuas.setText(detailLuas);
+        tvDetailKota.setText(detailKota);
+        tvDetailTglDibangun.setText(detailTglDibangun);
+
+//        Toast.makeText(DetailActivity.this, "Judul" + detailJudul, Toast.LENGTH_SHORT).show();
 
         ypvVideo.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
             @Override

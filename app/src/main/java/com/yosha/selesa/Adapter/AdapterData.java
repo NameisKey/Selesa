@@ -37,6 +37,7 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.DataViewHolder
     @Override
     public void onBindViewHolder(@NonNull DataViewHolder holder, int position) {
         ModelTempatBersejarah tempatBersejarah = dataTempatBersejarah.get(position);
+
         holder.tvJudul.setText(tempatBersejarah.getNamaTempat());
         holder.tvDeskripsi.setText(tempatBersejarah.getDeskripsi());
         holder.tvKota.setText(tempatBersejarah.getKota());
@@ -54,21 +55,21 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.DataViewHolder
             public void onClick(View view) {
                 String xJudul, xDeskripsi, xKota, xLuas, xTglDibangun, xVideoId, xFoto;
                 xJudul = dataTempatBersejarah.get(holder.getBindingAdapterPosition()).getNamaTempat();
-//                xDeskripsi = tempatBersejarah.getDeskripsi();
-//                xFoto = tempatBersejarah.getFoto();
-//                xKota = tempatBersejarah.getKota();
-//                xLuas = tempatBersejarah.getLuas();
-//                xTglDibangun = tempatBersejarah.getTglDibangun();
-//                xVideoId = tempatBersejarah.getVideoId();
+                xDeskripsi = dataTempatBersejarah.get(holder.getBindingAdapterPosition()).getDeskripsi();
+                xFoto = dataTempatBersejarah.get(holder.getBindingAdapterPosition()).getFoto();
+                xKota = dataTempatBersejarah.get(holder.getBindingAdapterPosition()).getKota();
+                xLuas = dataTempatBersejarah.get(holder.getBindingAdapterPosition()).getLuas();
+                xTglDibangun = dataTempatBersejarah.get(holder.getBindingAdapterPosition()).getTglDibangun();
+                xVideoId = dataTempatBersejarah.get(holder.getBindingAdapterPosition()).getVideoId();
 
                 Intent intentKirim = new Intent(ctx, DetailActivity.class);
                 intentKirim.putExtra("xJudul", xJudul);
-//                intentKirim.putExtra("xDeskripsi", xDeskripsi);
-//                intentKirim.putExtra("xFoto", xFoto);
-//                intentKirim.putExtra("xKota", xKota);
-//                intentKirim.putExtra("xLuas", xLuas);
-//                intentKirim.putExtra("xTglDibangun", xTglDibangun);
-//                intentKirim.putExtra("xVideoId", xVideoId);
+                intentKirim.putExtra("xDeskripsi", xDeskripsi);
+                intentKirim.putExtra("xFoto", xFoto);
+                intentKirim.putExtra("xKota", xKota);
+                intentKirim.putExtra("xLuas", xLuas);
+                intentKirim.putExtra("xTglDibangun", xTglDibangun);
+                intentKirim.putExtra("xVideoId", xVideoId);
                 ctx.startActivity(intentKirim);
             }
         });
