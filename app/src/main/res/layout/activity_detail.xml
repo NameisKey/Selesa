@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.DetailActivity"
+    android:layout_margin="12dp"
+    android:padding="8dp">
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/ypv_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_detail_judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Tempat"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/ypv_video"/>
+    
+    <TableLayout
+        android:id="@+id/tbl_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_detail_judul">
+
+        <TableRow android:padding="6dp">
+            <TextView
+                android:text="Kota"/>
+            <TextView
+                android:text=" : "
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="6dp"/>
+            <TextView
+                android:id="@+id/tv_detail_kota"
+                android:text="Lokasi Kota"/>
+        </TableRow>
+
+        <TableRow android:padding="6dp">
+            <TextView
+                android:text="Tanggal Dibangun"/>
+            <TextView
+                android:text=" : "
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="6dp"/>
+            <TextView
+                android:id="@+id/tv_detail_tgl_dibangun"
+                android:text="Tanggal Dibangun"/>
+        </TableRow>
+
+        <TableRow android:padding="6dp">
+            <TextView
+                android:text="Luas"/>
+            <TextView
+                android:text=" : "
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="6dp"/>
+            <TextView
+                android:id="@+id/tv_detail_luas"
+                android:text="Luas Tempat"/>
+        </TableRow>
+
+        <TableRow android:padding="6dp">
+            <TextView
+                android:text="Deskripsi"/>
+            <TextView
+                android:text=" : "
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="6dp"/>
+            <TextView
+                android:id="@+id/tv_detail_deskripsi"
+                android:text="Deskripsi"/>
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btn_map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Menuju Lokasi Tempat"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

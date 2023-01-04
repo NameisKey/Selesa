@@ -32,7 +32,7 @@
             android:justificationMode="inter_word"/>
 
         <TextView
-            android:id="@+id/deskripsi"
+            android:id="@+id/tv_deskripsi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Deskripsi Singkat"
@@ -43,6 +43,36 @@
             android:maxLines="2"
             android:ellipsize="end"
             android:justificationMode="inter_word"/>
+        
+        <TextView
+            android:id="@+id/tv_kota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kota"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_tgl_dibangun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal Dibangun"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_luas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Luas"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_video_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID Youtube"
+            android:visibility="gone"/>
+
+
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
