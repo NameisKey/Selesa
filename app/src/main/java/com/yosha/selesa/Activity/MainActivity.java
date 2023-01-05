@@ -15,13 +15,19 @@ import com.yosha.selesa.R;
 
 public class MainActivity extends AppCompatActivity {
     private FloatingActionButton openBottomModal;
-    private Button btnKemerdekaan, btnIslam, btnHindu, btnBudha, btnKristen;
+    private Button btnKemerdekaan, btnIslam, btnHindu, btnBuddha, btnKristen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         btnKemerdekaan = findViewById(R.id.btn_kemerdekaan);
+        btnIslam = findViewById(R.id.btn_islam);
+        btnHindu = findViewById(R.id.btn_hindu);
+        btnBuddha = findViewById(R.id.btn_buddha);
+        btnKristen = findViewById(R.id.btn_kristen);
+
+        Intent intentKirim = new Intent(MainActivity.this, RecyclerActivity.class);
 
         openBottomModal = findViewById(R.id.btn_fab);
         openBottomModal.setOnClickListener(new View.OnClickListener() {
@@ -38,7 +44,27 @@ public class MainActivity extends AppCompatActivity {
         btnKemerdekaan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, RecyclerActivity.class));
+                intentKirim.putExtra("xJudul", "Sejarah Kemerdekaan Indonesia");
+                intentKirim.putExtra("xState", "stateKemerdekaan");
+                startActivity(intentKirim);
+            }
+        });
+
+        btnIslam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intentKirim.putExtra("xJudul", "Sejarah Islam");
+                intentKirim.putExtra("xState", "stateIslam");
+                startActivity(intentKirim);
+            }
+        });
+
+        btnHindu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intentKirim.putExtra("xJudul", "Sejarah Hindu");
+                intentKirim.putExtra("xState", "stateHindu");
+                startActivity(intentKirim);
             }
         });
 
