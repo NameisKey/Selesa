@@ -68,6 +68,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnKristen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intentKirim.putExtra("xJudul", "Sejarah Kristen");
+                intentKirim.putExtra("xState", "stateKristen");
+                startActivity(intentKirim);
+            }
+        });
+
+        btnBuddha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intentKirim.putExtra("xJudul", "Sejarah Buddha");
+                intentKirim.putExtra("xState", "stateBuddha");
+                startActivity(intentKirim);
+            }
+        });
+
     }
 }
 

@@ -23,6 +23,7 @@ public class DataKemerdekaanIndonesia {
             model.setLuas(varData[4]);
             model.setFoto(varData[5]);
             model.setVideoId(varData[6]);
+//            model.setLokasi(varData[7]);
 
             dataTempatBersejarah.add(model);
         }

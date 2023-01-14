@@ -8,6 +8,7 @@ public class ModelTempatBersejarah {
     private String luas;
     private String foto;
     private String videoId;
+    private String Lokasi;
 
     public String getNamaTempat() {
         return namaTempat;
@@ -64,4 +65,8 @@ public class ModelTempatBersejarah {
     public void setVideoId(String videoId) {
         this.videoId = videoId;
     }
+
+    public String getLokasi(String lokasi) {return lokasi; }
+
+    public void setLokasi(String lokasi) {Lokasi = lokasi;}
 }
