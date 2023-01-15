@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -37,6 +39,8 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.DataViewHolder
     @Override
     public void onBindViewHolder(@NonNull DataViewHolder holder, int position) {
         ModelTempatBersejarah tempatBersejarah = dataTempatBersejarah.get(position);
+        Animation animation = AnimationUtils.loadAnimation(ctx, android.R.anim.slide_in_left);
+
 
         holder.tvJudul.setText(tempatBersejarah.getNamaTempat());
         holder.tvDeskripsi.setText(tempatBersejarah.getDeskripsi());
@@ -49,7 +53,7 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.DataViewHolder
                 .load(tempatBersejarah.getFoto())
                 .centerCrop()
                 .into(holder.ivFoto);
-
+        holder.itemView.startAnimation(animation);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
