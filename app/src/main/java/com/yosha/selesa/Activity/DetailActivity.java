@@ -66,7 +66,7 @@ public class DetailActivity extends AppCompatActivity {
         btnMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=" + detailJudul));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=" + detailJudul + " " + detailKota));
                         startActivity(intent);
 
             }
